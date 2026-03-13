@@ -1,0 +1,19 @@
+class Solution {
+    public int smallestDivisor(int[] nums, int threshold) {
+        int n = nums.lemgth;
+        int res = 0;
+        int ans = 0;
+
+        for (int i = 1; i <= threshold; i++) {
+            nums[i] /= i;
+        }
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
+        } 
+        if (sum <= threshold) {
+            ans = sum;
+        }
+
+        return ans;
+    }
+}
